@@ -13,3 +13,8 @@ try {
     die;
 }
 
+
+class db{
+    
+}
+
