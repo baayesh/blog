@@ -1,5 +1,10 @@
 <?php
-$test = "hello world!";
-require 'index.view.php';
+require 'core/db.php';
+// get data from db
+$query = $conn-> prepare('SELECT * FROM blog');
+$query->execute();
+$blog = $query-> fetchAll(PDO::FETCH_OBJ);
+var_dump($blog);
+die;
 
-?>
+require 'index.view.php';
